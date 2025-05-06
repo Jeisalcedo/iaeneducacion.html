@@ -1,230 +1,146 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IA en Educación - Explora el Futuro</title>
-    <!-- Fuentes de Google -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
-    <!-- Iconos FontAwesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --color-primary: #6C63FF;
-            --color-secondary: #FF6584;
-            --color-dark: #333;
-            --color-light: #f8f9fa;
-            --gradient-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-        }
-        
-        body {
-            font-family: 'Open Sans', sans-serif;
-            margin: 0;
-            padding: 0;
-            background: var(--gradient-bg);
-            background-size: 400% 400%;
-            animation: gradient 15s ease infinite;
-            color: var(--color-light);
-            line-height: 1.6;
-        }
-        
-        @keyframes gradient {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-        
-        header {
-            text-align: center;
-            padding: 4rem 0;
-            background: rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(10px);
-        }
-        
-        h1, h2, h3 {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-        }
-        
-        h1 {
-            font-size: 3rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 20px;
-        }
-        
-        .card {
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 15px;
-            padding: 2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transform: translateY(0);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            color: var(--color-dark);
-        }
-        
-        .card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-        }
-        
-        .btn {
-            display: inline-block;
-            background: var(--color-primary);
-            color: white;
-            padding: 0.8rem 1.5rem;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 600;
-            margin-top: 1rem;
-            transition: all 0.3s ease;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .btn:hover {
-            background: var(--color-secondary);
-            transform: scale(1.05);
-        }
-        
-        .img-container {
-            text-align: center;
-            margin: 2rem 0;
-        }
-        
-        .img-container img {
-            border-radius: 10px;
-            max-width: 100%;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
-        
-        footer {
-            text-align: center;
-            padding: 2rem;
-            background: rgba(0, 0, 0, 0.3);
-            margin-top: 3rem;
-        }
-        
-        .social-links a {
-            color: white;
-            font-size: 1.5rem;
-            margin: 0 10px;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            color: var(--color-secondary);
-            transform: translateY(-5px);
-        }
-        
-        /* Animaciones */
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .animated {
-            animation: fadeIn 1s ease-out forwards;
-        }
-        
-        .delay-1 { animation-delay: 0.2s; }
-        .delay-2 { animation-delay: 0.4s; }
-        .delay-3 { animation-delay: 0.6s; }
-    </style>
+  <meta charset="UTF-8">
+  <title>IA en la Educación</title>
+  <link href="https://fonts.googleapis.com/css2?family=Comic+Neue&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Neue', cursive;
+      background: linear-gradient(135deg, #fceabb 0%, #f8b500 100%);
+      color: #333;
+    }
+    header {
+      background: #ff6f61;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      font-size: 2em;
+      animation: entrada 1s ease-in-out;
+    }
+    section {
+      background: white;
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 900px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      animation: entrada 1.2s ease-in-out;
+    }
+    h2 {
+      color: #ff6f61;
+    }
+    a {
+      color: #0077cc;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    button {
+      background-color: #ff6f61;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      margin-top: 10px;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 1em;
+    }
+    button:hover {
+      background-color: #e05245;
+    }
+    input[type="number"] {
+      padding: 8px;
+      border-radius: 10px;
+      border: 1px solid #ccc;
+      font-size: 1em;
+    }
+    img {
+      max-width: 100%;
+      border-radius: 15px;
+      margin-top: 10px;
+    }
+    blockquote {
+      font-style: italic;
+      background-color: #f9f9f9;
+      padding: 15px;
+      border-left: 5px solid #ff6f61;
+      border-radius: 10px;
+    }
+    ul {
+      padding-left: 20px;
+    }
+    @keyframes entrada {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-    <header class="animated">
-        <h1>✨ IA en Educación</h1>
-        <p>Descubre cómo la inteligencia artificial está revolucionando el aprendizaje</p>
-        <a href="#experiencia" class="btn delay-1">Explorar</a>
-    </header>
 
-    <div class="container">
-        <section id="experiencia" class="card animated delay-1">
-            <h2><i class="fas fa-user-graduate"></i> Mi Experiencia</h2>
-            <p>
-                Durante este curso, he descubierto herramientas como ChatGPT y MidJourney, que me han sorprendido por su capacidad para generar contenido educativo de manera rápida y creativa. La IA ha transformado mi forma de planear clases y actividades interactivas.
-            </p>
-            <div class="img-container">
-                <img src="https://source.unsplash.com/random/800x400/?ai,education" alt="IA en Educación">
-            </div>
-        </section>
+<header>
+  🌟 IA en la Educación 🌟
+</header>
 
-        <section id="preguntas" class="card animated delay-2">
-            <h2><i class="fas fa-question-circle"></i> Reflexiones</h2>
-            <div class="grid">
-                <div>
-                    <h3><i class="fas fa-star"></i> Lo Sorprendente</h3>
-                    <p>La personalización del aprendizaje y la generación de contenido adaptativo en segundos.</p>
-                </div>
-                <div>
-                    <h3><i class="fas fa-exclamation-triangle"></i> Preocupaciones</h3>
-                    <p>La posible dependencia excesiva y la pérdida de pensamiento crítico. Sugiero usarla como asistente, no como reemplazo.</p>
-                </div>
-                <div>
-                    <h3><i class="fas fa-flag"></i> Mis Retos</h3>
-                    <p>Aprender a integrarla éticamente en el aula sin perder la interacción humana.</p>
-                </div>
-            </div>
-        </section>
+<section>
+  <h2>Mi experiencia</h2>
+  <p>No tenía conocimientos previos sobre el uso de Inteligencia Artificial (IA), pero este curso me ha permitido explorar herramientas muy interesantes. Me ha sorprendido lo útil que puede ser la IA en educación, sobre todo para generar contenidos, automatizar tareas y fomentar la creatividad.</p>
+</section>
 
-        <section id="creatividad" class="card animated delay-3">
-            <h2><i class="fas fa-magic"></i> Proyectos Creativos</h2>
-            <div class="img-container">
-                <img src="https://source.unsplash.com/random/800x400/?robot,classroom" alt="Proyecto IA">
-            </div>
-            <h3>Ideas para el Aula:</h3>
-            <ul>
-                <li><i class="fas fa-check"></i> Asistentes virtuales para tutorías</li>
-                <li><i class="fas fa-check"></i> Generador automático de quizzes</li>
-                <li><i class="fas fa-check"></i> Traducción en tiempo real</li>
-            </ul>
-            <a href="#" class="btn">Ver más ideas</a>
-        </section>
+<section>
+  <h2>Reflexión personal</h2>
+  <ul>
+    <li><strong>¿Qué cosas te parecen sorprendentes?</strong> La capacidad que tiene la IA para generar texto, imágenes, código, e incluso videos, en cuestión de segundos.</li>
+    <li><strong>¿Qué te preocupa y qué sugerencias darías?</strong> Me preocupa el mal uso de la IA. Sugeriría enseñar ética digital desde la escuela.</li>
+    <li><strong>¿Cuáles son tus retos personales?</strong> Aprender a usar estas herramientas sin miedo, y aplicarlas en la vida diaria con sentido crítico.</li>
+  </ul>
+</section>
 
-        <section id="links" class="card">
-            <h2><i class="fas fa-link"></i> Enlaces Útiles</h2>
-            <div class="links-grid">
-                <a href="https://jeisalcedo.github.io/Derecho-Tributario-para-el-Derecho-Privado-Estrategias-y-Aplicaciones-Pr-cticas/"_blank"><i class="fab fa-github"></i> Mi GitHub</a>
-                <a href="https://emersonuan.github.io/firstwebpage/" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Página de Referencia</a>
-                <a href="https://openai.com/blog" class="btn" target="_blank"><i class="fas fa-newspaper"></i> Blog de OpenAI</a>
-            </div>
-        </section>
-    </div>
+<section>
+  <h2>Enlaces recomendados</h2>
+  <ul>
+    <li><a href="index.html" target="_blank">Mi página personal (Actividad módulo 2)</a></li>
+    <li><a href="https://emersonuan.github.io/firstwebpage/" target="_blank">Página del curso</a></li>
+    <li><a href="https://openai.com/dall-e" target="_blank">DALL·E - Crear imágenes con IA</a></li>
+    <li><a href="https://www.futuretools.io/" target="_blank">FutureTools - Herramientas para IA</a></li>
+  </ul>
+</section>
 
-    <footer>
-        <div class="social-links">
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-        </div>
-        <p>© 2025 - Creado con ❤️ y IA</p>
-    </footer>
+<section>
+  <h2>Imagen generada con IA</h2>
+  <img src="https://images.unsplash.com/photo-1664575594939-f72336d12d01" alt="Imagen IA">
+  <p><em>Imagen generada por IA, ideal para inspirar creatividad en el aula.</em></p>
+</section>
 
-    <script>
-        // Efecto de scroll suave
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                document.querySelector(this.getAttribute('href')).scrollIntoView({
-                    behavior: 'smooth'
-                });
-            });
-        });
-        
-        // Animación adicional al cargar
-        document.addEventListener('DOMContentLoaded', () => {
-            const cards = document.querySelectorAll('.card');
-            cards.forEach((card, index) => {
-                card.style.animationDelay = `${index * 0.2}s`;
-            });
-        });
-    </script>
+<section>
+  <h2>🎮 Adivina el número (Mini juego)</h2>
+  <p>Ingresa un número del 1 al 10:</p>
+  <input type="number" id="userGuess" min="1" max="10">
+  <button onclick="checkGuess()">Adivinar</button>
+  <p id="result"></p>
+
+  <script>
+    const secret = Math.floor(Math.random() * 10) + 1;
+    function checkGuess() {
+      const guess = parseInt(document.getElementById("userGuess").value);
+      const result = document.getElementById("result");
+      if (guess === secret) {
+        result.textContent = "¡Correcto! 🎉";
+      } else {
+        result.textContent = "Incorrecto, intenta otra vez.";
+      }
+    }
+  </script>
+</section>
+
+<section>
+  <h2>🌈 Texto Inspirador</h2>
+  <blockquote>
+    “La educación no cambia el mundo: cambia a las personas que van a cambiar el mundo.” – Paulo Freire
+  </blockquote>
+</section>
+
 </body>
 </html>
