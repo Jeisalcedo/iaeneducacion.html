@@ -3,396 +3,42 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>¡IA en la Educación: Estrategias y Aventuras!</title>
+    <title>¡Explorando la IA en la Educación!</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #2e7d32;
-            --secondary-color: #4caf50;
-            --accent-color: #ff9800;
-            --light-color: #f1f8e9;
-            --dark-color: #1b5e20;
-            --text-color: #333;
-            --text-light: #666;
-            --transition: all 0.3s ease-in-out;
-            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            --border-radius: 10px;
-        }
-
         body {
             margin: 0;
             font-family: 'Poppins', sans-serif;
-            background-color: var(--light-color);
-            color: var(--text-color);
-            line-height: 1.6;
-            overflow-x: hidden;
+            background: linear-gradient(45deg, #f4f4f4 0%, #e0f7fa 100%);
+            color: #333;
+            animation: fondoAnimado 5s linear infinite;
         }
 
-        /* Header */
+        @keyframes fondoAnimado {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
         header {
-            background: linear-gradient(135deg, var(--primary-color), var(--dark-color));
+            background: #29b6f6;
             color: white;
-            padding: 2rem 0;
+            padding: 20px;
             text-align: center;
-            position: relative;
-            overflow: hidden;
+            font-size: 2.2em;
+            text-shadow: 2px 2px 4px #00000040;
+            animation: entradaHeader 1s ease-out;
         }
 
-        .header-content {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        header h1 {
-            font-size: 2.3rem;
-            margin-bottom: 1rem;
-            animation: fadeInDown 1s ease;
-        }
-
-        header p {
-            font-size: 1.1rem;
-            max-width: 800px;
-            margin: 0 auto;
-            opacity: 0.9;
-            animation: fadeInUp 1s ease;
-        }
-
-        .header-decoration {
-            position: absolute;
-            width: 250px;
-            height: 250px;
-            background: rgba(255, 255, 255, 0.05);
-            border-radius: 50%;
-            z-index: 1;
-        }
-
-        .decoration-1 {
-            top: -120px;
-            right: -80px;
-        }
-
-        .decoration-2 {
-            bottom: -80px;
-            left: -80px;
-            width: 150px;
-            height: 150px;
-        }
-
-        /* Navigation */
-        nav {
-            background-color: white;
-            box-shadow: var(--box-shadow);
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
-        .nav-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1rem 2rem;
-        }
-
-        .logo {
-            font-weight: 700;
-            color: var(--primary-color);
-            font-size: 1.5rem;
-            text-decoration: none;
-        }
-
-        .logo span {
-            color: var(--secondary-color);
-        }
-
-        .nav-links {
-            display: flex;
-            list-style: none;
-        }
-
-        .nav-links li {
-            margin-left: 1.5rem;
-            position: relative;
-        }
-
-        .nav-links a {
-            text-decoration: none;
-            color: var(--text-color);
-            font-weight: 500;
-            transition: var(--transition);
-            padding: 0.5rem 0;
-            display: block;
-        }
-
-        .nav-links a:hover {
-            color: var(--secondary-color);
-        }
-
-        .nav-links a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: var(--secondary-color);
-            transition: var(--transition);
-        }
-
-        .nav-links a:hover::after {
-            width: 100%;
-        }
-
-        .mobile-menu-btn {
-            display: none;
-            background: none;
-            border: none;
-            font-size: 1.5rem;
-            color: var(--primary-color);
-            cursor: pointer;
-        }
-
-        /* Main Content */
-        main {
-            max-width: 1200px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-        }
-
-        section {
-            margin-bottom: 3rem;
-            background-color: white;
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            padding: 2rem;
-        }
-
-        .section-title {
-            text-align: center;
-            margin-bottom: 2rem;
-            position: relative;
-        }
-
-        .section-title h2 {
-            font-size: 2rem;
-            color: var(--primary-color);
-            display: inline-block;
-            padding-bottom: 0.5rem;
-        }
-
-        .section-title h2::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 60px;
-            height: 3px;
-            background-color: var(--secondary-color);
-        }
-
-        .intro-content {
-            display: flex;
-            gap: 2rem;
-            align-items: center;
-            margin-bottom: 2rem;
-        }
-
-        .intro-text {
-            flex: 1;
-        }
-
-        .intro-image {
-            flex: 1;
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-        }
-
-        .intro-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: var(--transition);
-        }
-
-        .intro-image:hover img {
-            transform: scale(1.05);
-        }
-
-        .topics-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .topic-card {
-            background-color: var(--light-color);
-            border-radius: var(--border-radius);
-            box-shadow: var(--box-shadow);
-            overflow: hidden;
-            transition: var(--transition);
-        }
-
-        .topic-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
-        }
-
-        .topic-image {
-            height: 150px;
-            overflow: hidden;
-        }
-
-        .topic-image img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: var(--transition);
-        }
-
-        .topic-card:hover .topic-image img {
-            transform: scale(1.1);
-        }
-
-        .topic-content {
-            padding: 1rem;
-        }
-
-        .topic-content h3 {
-            color: var(--primary-color);
-            margin-bottom: 0.5rem;
-            font-size: 1.2rem;
-        }
-
-        .topic-content p {
-            color: var(--text-light);
-            font-size: 0.9rem;
-        }
-
-        /* Buttons */
-        .btn {
-            display: inline-block;
-            padding: 0.6rem 1.2rem;
-            background-color: var(--secondary-color);
-            color: white;
-            border: none;
-            border-radius: var(--border-radius);
-            text-decoration: none;
-            font-weight: 500;
-            cursor: pointer;
-            transition: var(--transition);
-        }
-
-        .btn:hover {
-            background-color: var(--primary-color);
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(76, 175, 80, 0.4);
-        }
-
-        /* Footer */
-        footer {
-            background-color: var(--dark-color);
-            color: white;
-            padding: 3rem 0 1.5rem;
-        }
-
-        .footer-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
-        }
-
-        .footer-col h3 {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
-            position: relative;
-            padding-bottom: 0.4rem;
-        }
-
-        .footer-col h3::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 40px;
-            height: 2px;
-            background-color: var(--secondary-color);
-        }
-
-        .footer-col p {
-            margin-bottom: 0.8rem;
-            opacity: 0.8;
-            font-size: 0.9rem;
-        }
-
-        .footer-links {
-            list-style: none;
-        }
-
-        .footer-links li {
-            margin-bottom: 0.6rem;
-        }
-
-        .footer-links a {
-            color: white;
-            opacity: 0.8;
-            text-decoration: none;
-            transition: var(--transition);
-            display: block;
-            font-size: 0.9rem;
-        }
-
-        .footer-links a:hover {
-            opacity: 1;
-            padding-left: 5px;
-        }
-
-        .social-links {
-            display: flex;
-            gap: 0.8rem;
-            margin-top: 0.8rem;
-        }
-
-        .social-links a {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            width: 30px;
-            height: 30px;
-            background-color: rgba(255, 255, 255, 0.1);
-            border-radius: 50%;
-            color: white;
-            transition: var(--transition);
-            font-size: 0.8rem;
-        }
-
-        .social-links a:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-2px);
-        }
-
-        .copyright {
-            text-align: center;
-            padding-top: 1.5rem;
-            margin-top: 1.5rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            opacity: 0.7;
-            font-size: 0.8rem;
-        }
-
-        /* Animations */
-        @keyframes fadeInDown {
+        @keyframes entradaHeader {
             from {
                 opacity: 0;
                 transform: translateY(-20px);
@@ -404,7 +50,17 @@
             }
         }
 
-        @keyframes fadeInUp {
+        section {
+            background: rgba(255, 255, 255, 0.85);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 900px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            animation: entradaSection 1.2s ease-out;
+        }
+
+        @keyframes entradaSection {
             from {
                 opacity: 0;
                 transform: translateY(20px);
@@ -416,134 +72,226 @@
             }
         }
 
-        /* Responsive */
-        @media (max-width: 992px) {
-            .intro-content {
-                flex-direction: column;
-            }
+        h2 {
+            color: #29b6f6;
+            border-bottom: 3px solid #29b6f6;
+            padding-bottom: 5px;
         }
 
-        @media (max-width: 768px) {
-            .mobile-menu-btn {
-                display: block;
-            }
-
-            .nav-links {
-                position: fixed;
-                top: 60px;
-                left: -100%;
-                width: 100%;
-                height: calc(100vh - 60px);
-                background-color: white;
-                flex-direction: column;
-                align-items: center;
-                padding: 1.5rem 0;
-                transition: var(--transition);
-                box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-            }
-
-            .nav-links.active {
-                left: 0;
-            }
-
-            .nav-links li {
-                margin: 0.8rem 0;
-            }
-
-            header h1 {
-                font-size: 1.8rem;
-            }
-
-            header p {
-                font-size: 1rem;
-            }
+        a {
+            color: #0d47a1;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
         }
 
-        /* Ajustes para las imágenes */
-        .img-container {
-            border-radius: var(--border-radius);
-            overflow: hidden;
-            box-shadow: var(--box-shadow);
-            margin-bottom: 1rem;
+        a:hover {
+            color: #1565c0;
+            text-decoration: underline;
         }
 
-        .img-container img {
-            width: 100%;
-            height: auto;
-            display: block;
-            transition: transform 0.3s ease-in-out;
+        button {
+            background-color: #ffa726;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin-top: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
         }
 
-        .img-container:hover img {
-            transform: scale(1.05);
+        button:hover {
+            background-color: #ff8f00;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            border-radius: 8px;
+            border: 2px solid #ccc;
+            font-size: 1.1em;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 15px;
+            margin-top: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.03);
         }
 
         blockquote {
             font-style: italic;
-            color: var(--text-light);
-            border-left: 4px solid var(--accent-color);
-            padding: 0.5rem 1rem;
-            background-color: var(--light-color);
-            border-radius: var(--border-radius);
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 5px solid #ffa726;
+            border-radius: 10px;
+            margin: 20px 0;
         }
 
-        /* Estilos para el juego */
-        #game-container {
+        ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* Estilos para el footer */
+        footer {
             text-align: center;
-            margin-top: 1rem;
-        }
-
-        #guess-input {
-            padding: 0.5rem;
-            border: 1px solid var(--secondary-color);
-            border-radius: var(--border-radius);
-            margin-right: 0.5rem;
-        }
-
-        #guess-button {
-            padding: 0.5rem 1rem;
-            background-color: var(--accent-color);
+            padding: 10px;
+            background-color: #333;
             color: white;
-            border: none;
-            border-radius: var(--border-radius);
-            cursor: pointer;
-            transition: var(--transition);
+            font-size: 0.9em;
+            border-radius: 0 0 15px 15px;
+            margin-top: 20px;
         }
 
-        #guess-button:hover {
-            background-color: #e65100;
-        }
+        /* Media Query para hacerlo responsive */
+        @media (max-width: 600px) {
+            header {
+                font-size: 1.8em;
+                padding: 10px;
+            }
 
-        #result-message {
-            margin-top: 0.5rem;
-            font-weight: bold;
+            section {
+                margin: 10px auto;
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            blockquote {
+                font-size: 0.9em;
+            }
         }
     </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
 
 <body>
 
-    <nav>
-        <div class="nav-container">
-            <a href="#" class="logo">IA<span>Educa</span></a>
-            <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#inicio">Inicio</a></li>
-                <li><a href="#experiencia">Mi Experiencia</a></li>
-                <li><a href="#reflexion">Reflexión</a></li>
-                <li><a href="#recursos">Recursos</a></li>
-                <li><a href="#imagenes">Imágenes IA</a></li>
-                <li><a href="#juego">Juego</a></li>
-                <li><a href="#cita">Cita</a></li>
-            </ul>
-        </div>
-    </nav>
-
     <header>
-        <div class="header-decoration decoration-1"></div>
-        <div class="header-decoration decoration-2"></div>
-        <div class="header-content">
-            <h1>Explorando la IA en la Educación</h1>
-            <p>Un viaje
+        🚀 ¡Aventuras con la IA Educativa! 🤖
+    </header>
+
+    <section>
+        <h2>Mi Viaje con la IA ✨</h2>
+        <div style="float: right; margin-left: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <img src="openart-image_syc1aId-_1746544044108_raw.jpg" alt="Niña saltando en campo de flores" style="max-width: 200px;">
+        </div>
+        <p>
+            ¡Hola a todos! Embarcarme en el mundo de la Inteligencia Artificial ha sido como descubrir un universo nuevo. Al principio, la IA me parecía algo lejano, pero este curso me abrió los ojos a un montón de herramientas súper útiles. Me ha flipado cómo la IA puede transformar la educación, desde crear contenido alucinante hasta hacer que las tareas sean pan comido y ¡desatar nuestra creatividad!
+        </p>
+    </section>
+
+    <section>
+        <h2>Reflexiones Personales 🤓</h2>
+        <div style="float: left; margin-right: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <img src="openart-image_UjbO6CTC_1746543996777_raw.jpg" alt="Robot humanoide en el bosque" style="max-width: 200px;">
+        </div>
+        <ul>
+            <li>
+                <strong>Lo que me dejó boquiabierto:</strong> La habilidad de la IA para generar textos, imágenes, código y hasta videos en un abrir y cerrar de ojos. ¡Es como magia, pero real!
+                <i class="fas fa-magic"></i>
+            </li>
+            <li>
+                <strong>Mis preocupaciones y sugerencias:</strong> Me da un poco de yuyu pensar en el mal uso que se le puede dar a la IA. Creo que es vital enseñar a los peques (y a los no tan peques) a usarla con responsabilidad y ética. ¡Un curso de ética digital para todos!
+                <i class="fas fa-user-shield"></i>
+            </li>
+            <li>
+                <strong>Mis desafíos personales:</strong> Mi reto es vencer el miedo a experimentar y empezar a usar la IA en mi día a día, siempre con una mirada crítica y curiosa. ¡A aprender sin frenos!
+                <i class="fas fa-rocket"></i>
+            </li>
+        </ul>
+        <div style="clear: both;"></div>
+    </section>
+
+    <section>
+        <h2>¡Links que Inspiran! 🔗</h2>
+        <div style="float: right; margin-left: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <img src="openart-image_KAc-RwZ8_1746543944026_raw.jpg" alt="Profesora explicando IA" style="max-width: 200px;">
+        </div>
+        <p>Aquí te dejo algunos enlaces que me han resultado súper útiles y que te pueden dar un montón de ideas:</p>
+        <ul>
+            <li>
+                <a href="https://jeisalcedo.github.io/Derecho-Tributario-para-el-Derecho-Privado-Estrategias-y-Aplicaciones-Pr-cticas/" target="_blank">
+                    <i class="fas fa-home"></i> Mi Página Personal (¡Un clásico del Módulo 2!)
+                </a>
+            </li>
+            <li>
+                <a href="https://emersonuan.github.io/firstwebpage/" target="_blank">
+                    <i class="fas fa-graduation-cap"></i> La Página del Curso (¡Donde empezó todo!)
+                </a>
+            </li>
+            <li>
+                <a href="https://openai.com/dall-e" target="_blank">
+                    <i class="fas fa-paint-brush"></i> DALL·E - ¡Crea imágenes alucinantes con la IA!
+                </a>
+            </li>
+            <li>
+                <a href="https://www.futuretools.io/" target="_blank">
+                    <i class="fas fa-tools"></i> FutureTools - ¡La caja de herramientas definitiva para la IA!
+                </a>
+            </li>
+        </ul>
+        <div style="clear: both;"></div>
+    </section>
+
+    <section>
+        <h2>¡Explorando el Universo de la IA! 🌌</h2>
+        <div style="text-align: center;">
+            <img src="openart-image_mb3u2uqN_1746543875285_raw.jpg" alt="Persona en la cima mirando galaxia" style="max-width: 400px;">
+            <p><em>La IA abre un universo de posibilidades, ¡listos para explorarlo juntos!</em></p>
+        </div>
+    </section>
+
+    <section>
+        <h2>¡A Jugar con los Números! 🎮</h2>
+        <p>Adivina el número secreto (entre 1 y 10):</p>
+        <input type="number" id="userGuess" min="1" max="10">
+        <button onclick="checkGuess()">¡Adivinar!</button>
+        <p id="result"></p>
+
+        <script>
+            const secreto = Math.floor(Math.random() * 10) + 1;
+
+            function checkGuess() {
+                const intento = parseInt(document.getElementById("userGuess").value);
+                const resultado = document.getElementById("result");
+                if (intento === secreto) {
+                    resultado.textContent = "¡Lo adivinaste! 🎉 ¡Eres un crack!";
+                } else {
+                    resultado.textContent = "¡Fallaste! 😢 ¡Inténtalo de nuevo!";
+                }
+            }
+        </script>
+    </section>
+
+    <section>
+        <h2>¡Una Pildorita de Sabiduría! 🌟</h2>
+        <div style="text-align: center;">
+            <blockquote style="border-left-color: #64b5f6;">
+                "La tecnología es solo una herramienta. En términos de conseguir que los niños trabajen juntos y motivarlos, el profesor es lo más importante." - Bill Gates
+            </blockquote>
+        </div>
+    </section>
+
+    <footer>
+        <p>
+            Hecho con ❤️ por [Jeimy Carolina Salcedo Triana] | ¡A explorar el futuro de la educación con IA!
+        </p>
+    </footer>
+
+</body>
+
+</html>
