@@ -3,124 +3,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IA en Educación - Mi Experiencia</title>
+    <title>IA en Educación - Explora el Futuro</title>
+    <!-- Fuentes de Google -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <!-- Iconos FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
+        :root {
+            --color-primary: #6C63FF;
+            --color-secondary: #FF6584;
+            --color-dark: #333;
+            --color-light: #f8f9fa;
+            --gradient-bg: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
         body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+            font-family: 'Open Sans', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background: var(--gradient-bg);
+            background-size: 400% 400%;
+            animation: gradient 15s ease infinite;
+            color: var(--color-light);
+            line-height: 1.6;
         }
+        
+        @keyframes gradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
         header {
-            background: #35424a;
-            color: #ffffff;
-            padding: 20px 0;
             text-align: center;
+            padding: 4rem 0;
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(10px);
         }
-        section {
-            padding: 20px;
-            margin: 20px auto;
-            max-width: 800px;
-            background: #ffffff;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+        
         h1, h2, h3 {
-            color: #35424a;
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
         }
-        a {
-            color: #3498db;
+        
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 20px;
+        }
+        
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 15px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            transform: translateY(0);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            color: var(--color-dark);
+        }
+        
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--color-primary);
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
             text-decoration: none;
+            font-weight: 600;
+            margin-top: 1rem;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
         }
-        a:hover {
-            text-decoration: underline;
+        
+        .btn:hover {
+            background: var(--color-secondary);
+            transform: scale(1.05);
         }
+        
         .img-container {
             text-align: center;
-            margin: 20px 0;
+            margin: 2rem 0;
         }
-        img {
+        
+        .img-container img {
+            border-radius: 10px;
             max-width: 100%;
-            height: auto;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
         }
+        
         footer {
             text-align: center;
-            padding: 20px;
-            background: #35424a;
-            color: #ffffff;
+            padding: 2rem;
+            background: rgba(0, 0, 0, 0.3);
+            margin-top: 3rem;
         }
+        
+        .social-links a {
+            color: white;
+            font-size: 1.5rem;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            color: var(--color-secondary);
+            transform: translateY(-5px);
+        }
+        
+        /* Animaciones */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .animated {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        
+        .delay-1 { animation-delay: 0.2s; }
+        .delay-2 { animation-delay: 0.4s; }
+        .delay-3 { animation-delay: 0.6s; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>IA en Educación: Mi Experiencia</h1>
-        <p>Explorando el futuro del aprendizaje con Inteligencia Artificial</p>
+    <header class="animated">
+        <h1>✨ IA en Educación</h1>
+        <p>Descubre cómo la inteligencia artificial está revolucionando el aprendizaje</p>
+        <a href="#experiencia" class="btn delay-1">Explorar</a>
     </header>
 
-    <section id="experiencia">
-        <h2>Mi Experiencia con IA</h2>
-        <p>
-            [Aquí escribe tu experiencia personal con la IA, cómo la has usado en tu vida o trabajo, y qué has aprendido en este curso. Ejemplo: "Durante este curso, he descubierto herramientas como ChatGPT y MidJourney, que me han sorprendido por su capacidad para generar contenido educativo de manera rápida y creativa."]
-        </p>
-    </section>
+    <div class="container">
+        <section id="experiencia" class="card animated delay-1">
+            <h2><i class="fas fa-user-graduate"></i> Mi Experiencia</h2>
+            <p>
+                Durante este curso, he descubierto herramientas como ChatGPT y MidJourney, que me han sorprendido por su capacidad para generar contenido educativo de manera rápida y creativa. La IA ha transformado mi forma de planear clases y actividades interactivas.
+            </p>
+            <div class="img-container">
+                <img src="https://source.unsplash.com/random/800x400/?ai,education" alt="IA en Educación">
+            </div>
+        </section>
 
-    <section id="preguntas">
-        <h2>Reflexiones sobre IA</h2>
-        <h3>¿Qué me parece sorprendente?</h3>
-        <p>
-            [Ejemplo: "Me asombra cómo la IA puede personalizar el aprendizaje, adaptándose a las necesidades de cada estudiante, o cómo puede generar ejercicios y evaluaciones en segundos."]
-        </p>
+        <section id="preguntas" class="card animated delay-2">
+            <h2><i class="fas fa-question-circle"></i> Reflexiones</h2>
+            <div class="grid">
+                <div>
+                    <h3><i class="fas fa-star"></i> Lo Sorprendente</h3>
+                    <p>La personalización del aprendizaje y la generación de contenido adaptativo en segundos.</p>
+                </div>
+                <div>
+                    <h3><i class="fas fa-exclamation-triangle"></i> Preocupaciones</h3>
+                    <p>La posible dependencia excesiva y la pérdida de pensamiento crítico. Sugiero usarla como asistente, no como reemplazo.</p>
+                </div>
+                <div>
+                    <h3><i class="fas fa-flag"></i> Mis Retos</h3>
+                    <p>Aprender a integrarla éticamente en el aula sin perder la interacción humana.</p>
+                </div>
+            </div>
+        </section>
 
-        <h3>¿Qué me preocupa y qué sugerencias tengo?</h3>
-        <p>
-            [Ejemplo: "Me preocupa la dependencia excesiva de la IA o la pérdida de habilidades críticas. Sugiero que se integre de forma equilibrada, fomentando siempre el pensamiento humano."]
-        </p>
+        <section id="creatividad" class="card animated delay-3">
+            <h2><i class="fas fa-magic"></i> Proyectos Creativos</h2>
+            <div class="img-container">
+                <img src="https://source.unsplash.com/random/800x400/?robot,classroom" alt="Proyecto IA">
+            </div>
+            <h3>Ideas para el Aula:</h3>
+            <ul>
+                <li><i class="fas fa-check"></i> Asistentes virtuales para tutorías</li>
+                <li><i class="fas fa-check"></i> Generador automático de quizzes</li>
+                <li><i class="fas fa-check"></i> Traducción en tiempo real</li>
+            </ul>
+            <a href="#" class="btn">Ver más ideas</a>
+        </section>
 
-        <h3>Mis principales retos</h3>
-        <p>
-            [Ejemplo: "Uno de mis retos es entender los límites éticos de la IA y cómo aplicarla sin reemplazar la interacción humana en el aula."]
-        </p>
-    </section>
-
-    <section id="links">
-        <h2>Recursos y Enlaces</h2>
-        <ul>
-            <li><a href="https://jeisalcedo.github.io/Derecho-Tributario-para-el-Derecho-Privado-Estrategias-y-Aplicaciones-Pr-cticas/"_blank">Mi página personal (Actividad Módulo 2)</a></li>
-            <li><a href="https://emersonuan.github.io/firstwebpage/" target="_blank">Página de referencia</a></li>
-            <li><a href="https://www.elejandria.com" target="_blank">Ejemplo de creatividad con IA</a></li>
-            <li><a href="https://openai.com/blog" target="_blank">Blog de OpenAI (para inspiración)</a></li>
-        </ul>
-    </section>
-
-    <section id="creatividad">
-        <h2>Explorando la Creatividad con IA</h2>
-        
-        <h3>Imágenes generadas con IA</h3>
-        <div class="img-container">
-            <img src="https://via.placeholder.com/400x200?text=Imagen+generada+con+IA" alt="Ejemplo de imagen generada con IA">
-            <p><small>Imagen creada con herramientas como DALL-E o MidJourney.</small></p>
-        </div>
-
-        <h3>Ideas para proyectos educativos</h3>
-        <ul>
-            <li>Asistentes de IA para tutorías personalizadas.</li>
-            <li>Generación automática de cuestionarios basados en temas.</li>
-            <li>Traductores en tiempo real para aulas multiculturales.</li>
-        </ul>
-
-        <h3>Código interactivo (ejemplo sencillo)</h3>
-        <button onclick="alert('¡Hola! Esto es un mini-ejemplo de interactividad.')">Haz clic aquí</button>
-    </section>
+        <section id="links" class="card">
+            <h2><i class="fas fa-link"></i> Enlaces Útiles</h2>
+            <div class="links-grid">
+                <a href="https://github.com/tu-usuario" class="btn" target="_blank"><i class="fab fa-github"></i> Mi GitHub</a>
+                <a href="https://emersonuan.github.io/firstwebpage/" class="btn" target="_blank"><i class="fas fa-external-link-alt"></i> Página de Referencia</a>
+                <a href="https://openai.com/blog" class="btn" target="_blank"><i class="fas fa-newspaper"></i> Blog de OpenAI</a>
+            </div>
+        </section>
+    </div>
 
     <footer>
-        <p>© 2024 - Página creada para el curso de IA en Educación</p>
-        <p><a href="https://github.com/[tu-usuario]/[tu-repositorio]/iaeneducacion.html" target="_blank">Ver en GitHub</a></p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+        <p>© 2024 - Creado con ❤️ y IA</p>
     </footer>
 
     <script>
-        // Puedes agregar aquí código JS para interactividad, como un carrusel de imágenes.
-        console.log("¡Bienvenido a mi página sobre IA!");
+        // Efecto de scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Animación adicional al cargar
+        document.addEventListener('DOMContentLoaded', () => {
+            const cards = document.querySelectorAll('.card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.2}s`;
+            });
+        });
     </script>
 </body>
 </html>
