@@ -1,247 +1,298 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
-  <meta charset="UTF-8">
-  <title>¡IA en la Educación es Genial!</title>
-  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Nunito', sans-serif;
-      background: linear-gradient(45deg, #f0f9ff 0%, #c1f0c1 100%);
-      color: #333;
-      animation: fondoAnimado 5s linear infinite;
-    }
-    @keyframes fondoAnimado {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
-    header {
-      background: #845ef7;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      font-size: 2.5em;
-      text-shadow: 2px 2px 4px #000000;
-      animation: entradaHeader 1s ease-out;
-    }
-    @keyframes entradaHeader {
-      from {
-        opacity: 0;
-        transform: translateY(-20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    section {
-      background: rgba(255, 255, 255, 0.85);
-      margin: 20px auto;
-      padding: 20px;
-      max-width: 900px;
-      border-radius: 15px;
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-      animation: entradaSection 1.2s ease-out;
-    }
-    @keyframes entradaSection {
-      from {
-        opacity: 0;
-        transform: translateY(20px);
-      }
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-    h2 {
-      color: #845ef7;
-      border-bottom: 3px solid #845ef7;
-      padding-bottom: 5px;
-    }
-    a {
-      color: #007bff;
-      text-decoration: none;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-    a:hover {
-      color: #0056b3;
-      text-decoration: underline;
-    }
-    button {
-      background-color: #ff851b;
-      color: white;
-      border: none;
-      padding: 12px 24px;
-      margin-top: 10px;
-      border-radius: 8px;
-      cursor: pointer;
-      font-size: 1.1em;
-      transition: background-color 0.3s ease;
-    }
-    button:hover {
-      background-color: #e67117;
-    }
-    input[type="number"] {
-      padding: 10px;
-      border-radius: 8px;
-      border: 2px solid #ccc;
-      font-size: 1.1em;
-    }
-    img {
-      max-width: 100%;
-      border-radius: 15px;
-      margin-top: 10px;
-      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-      transition: transform 0.2s ease-in-out;
-    }
-    img:hover {
-      transform: scale(1.03);
-    }
-    blockquote {
-      font-style: italic;
-      background-color: #f9f9f9;
-      padding: 15px;
-      border-left: 5px solid #ff851b;
-      border-radius: 10px;
-      margin: 20px 0;
-    }
-    ul {
-      padding-left: 20px;
-      list-style-type: disc;
-    }
-    li {
-      margin-bottom: 5px;
-    }
-    /* Estilos para el footer */
-    footer {
-      text-align: center;
-      padding: 10px;
-      background-color: #333;
-      color: white;
-      font-size: 0.9em;
-      border-radius: 0 0 15px 15px;
-      margin-top: 20px;
-    }
-    /* Media Query para hacerlo responsive */
-    @media (max-width: 600px) {
-      header {
-        font-size: 1.8em;
-        padding: 10px;
-      }
-      section {
-        margin: 10px auto;
-        padding: 10px;
-      }
-      h2 {
-        font-size: 1.5em;
-      }
-      blockquote {
-        font-size: 0.9em;
-      }
-    }
-  </style>
-  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <meta charset="UTF-8">
+    <title>¡IA en la Educación es Genial!</title>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Nunito', sans-serif;
+            background: linear-gradient(45deg, #f0f9ff 0%, #c1f0c1 100%);
+            color: #333;
+            animation: fondoAnimado 5s linear infinite;
+        }
+
+        @keyframes fondoAnimado {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            50% {
+                background-position: 100% 50%;
+            }
+
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+
+        header {
+            background: #845ef7;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px #000000;
+            animation: entradaHeader 1s ease-out;
+        }
+
+        @keyframes entradaHeader {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            background: rgba(255, 255, 255, 0.85);
+            margin: 20px auto;
+            padding: 20px;
+            max-width: 900px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+            animation: entradaSection 1.2s ease-out;
+        }
+
+        @keyframes entradaSection {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h2 {
+            color: #845ef7;
+            border-bottom: 3px solid #845ef7;
+            padding-bottom: 5px;
+        }
+
+        a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: #0056b3;
+            text-decoration: underline;
+        }
+
+        button {
+            background-color: #ff851b;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            margin-top: 10px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1em;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #e67117;
+        }
+
+        input[type="number"] {
+            padding: 10px;
+            border-radius: 8px;
+            border: 2px solid #ccc;
+            font-size: 1.1em;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 15px;
+            margin-top: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        img:hover {
+            transform: scale(1.03);
+        }
+
+        blockquote {
+            font-style: italic;
+            background-color: #f9f9f9;
+            padding: 15px;
+            border-left: 5px solid #ff851b;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        ul {
+            padding-left: 20px;
+            list-style-type: disc;
+        }
+
+        li {
+            margin-bottom: 5px;
+        }
+
+        /* Estilos para el footer */
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+            font-size: 0.9em;
+            border-radius: 0 0 15px 15px;
+            margin-top: 20px;
+        }
+
+        /* Media Query para hacerlo responsive */
+        @media (max-width: 600px) {
+            header {
+                font-size: 1.8em;
+                padding: 10px;
+            }
+
+            section {
+                margin: 10px auto;
+                padding: 10px;
+            }
+
+            h2 {
+                font-size: 1.5em;
+            }
+
+            blockquote {
+                font-size: 0.9em;
+            }
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
 </head>
+
 <body>
 
-<header>
-  🎉 ¡Aventuras con la IA Educativa! 🚀
-</header>
+    <header>
+        🎉 ¡Aventuras con la IA Educativa! 🚀
+    </header>
 
-<section>
-  <h2>Mi Viaje con la IA ✨</h2>
-  <p>
-    ¡Hola a todos! Embarcarme en el mundo de la Inteligencia Artificial ha sido como descubrir un universo nuevo. Al principio, la IA me parecía algo lejano, pero este curso me abrió los ojos a un montón de herramientas súper útiles. Me ha flipado cómo la IA puede transformar la educación, desde crear contenido alucinante hasta hacer que las tareas sean pan comido y ¡desatar nuestra creatividad!
-  </p>
-</section>
+    <section>
+        <h2>Mi Viaje con la IA ✨</h2>
+        <div style="float: right; margin-left: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <img src="URL_DE_TU_IMAGEN_IA_1" alt="Explorando la IA" style="max-width: 200px;">
+        </div>
+        <p>
+            ¡Hola a todos! Embarcarme en el mundo de la Inteligencia Artificial ha sido como descubrir un universo nuevo. Al principio, la IA me parecía algo lejano, pero este curso me abrió los ojos a un montón de herramientas súper útiles. Me ha flipado cómo la IA puede transformar la educación, desde crear contenido alucinante hasta hacer que las tareas sean pan comido y ¡desatar nuestra creatividad!
+        </p>
+    </section>
 
-<section>
-  <h2>Reflexiones Personales 🤓</h2>
-  <ul>
-    <li>
-      <strong>Lo que me dejó boquiabierto:</strong> La habilidad de la IA para generar textos, imágenes, código y hasta videos en un abrir y cerrar de ojos. ¡Es como magia, pero real! 
-      <i class="fas fa-magic"></i>
-    </li>
-    <li>
-      <strong>Mis preocupaciones y sugerencias:</strong> Me da un poco de yuyu pensar en el mal uso que se le puede dar a la IA. Creo que es vital enseñar a los peques (y a los no tan peques) a usarla con responsabilidad y ética. ¡Un curso de ética digital para todos! 
-      <i class="fas fa-user-shield"></i>
-    </li>
-    <li>
-      <strong>Mis desafíos personales:</strong> Mi reto es vencer el miedo a experimentar y empezar a usar la IA en mi día a día, siempre con una mirada crítica y curiosa. ¡A aprender sin frenos! 
-      <i class="fas fa-rocket"></i>
-    </li>
-  </ul>
-</section>
+    <section>
+        <h2>Reflexiones Personales 🤓</h2>
+        <div style="float: left; margin-right: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <img src="URL_DE_TU_IMAGEN_IA_2" alt="Pensando en la IA" style="max-width: 200px;">
+        </div>
+        <ul>
+            <li>
+                <strong>Lo que me dejó boquiabierto:</strong> La habilidad de la IA para generar textos, imágenes, código y hasta videos en un abrir y cerrar de ojos. ¡Es como magia, pero real!
+                <i class="fas fa-magic"></i>
+            </li>
+            <li>
+                <strong>Mis preocupaciones y sugerencias:</strong> Me da un poco de yuyu pensar en el mal uso que se le puede dar a la IA. Creo que es vital enseñar a los peques (y a los no tan peques) a usarla con responsabilidad y ética. ¡Un curso de ética digital para todos!
+                <i class="fas fa-user-shield"></i>
+            </li>
+            <li>
+                <strong>Mis desafíos personales:</strong> Mi reto es vencer el miedo a experimentar y empezar a usar la IA en mi día a día, siempre con una mirada crítica y curiosa. ¡A aprender sin frenos!
+                <i class="fas fa-rocket"></i>
+            </li>
+        </ul>
+        <div style="clear: both;"></div>
+    </section>
 
-<section>
-  <h2>¡Links que Inspiran! 🔗</h2>
-  <p>Aquí te dejo algunos enlaces que me han resultado súper útiles y que te pueden dar un montón de ideas:</p>
-  <ul>
-    <li>
-      <a href="index.html" target="_blank">
-        <i class="fas fa-home"></i> Mi Página Personal (¡Un clásico del Módulo 2!)
-      </a>
-    </li>
-    <li>
-      <a href="https://emersonuan.github.io/firstwebpage/" target="_blank">
-        <i class="fas fa-graduation-cap"></i> La Página del Curso (¡Donde empezó todo!)
-      </a>
-    </li>
-    <li>
-      <a href="https://openai.com/dall-e" target="_blank">
-        <i class="fas fa-paint-brush"></i> DALL·E - ¡Crea imágenes alucinantes con la IA!
-      </a>
-    </li>
-    <li>
-      <a href="https://www.futuretools.io/" target="_blank">
-        <i class="fas fa-tools"></i> FutureTools - ¡La caja de herramientas definitiva para la IA!
-      </a>
-    </li>
-  </ul>
-</section>
+    <section>
+        <h2>¡Links que Inspiran! 🔗</h2>
+        <div style="float: right; margin-left: 15px; border-radius: 10px; overflow: hidden; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);">
+            <img src="URL_DE_TU_IMAGEN_IA_3" alt="Recursos de IA" style="max-width: 200px;">
+        </div>
+        <p>Aquí te dejo algunos enlaces que me han resultado súper útiles y que te pueden dar un montón de ideas:</p>
+        <ul>
+            <li>
+                <a href="index.html" target="_blank">
+                    <i class="fas fa-home"></i> Mi Página Personal (¡Un clásico del Módulo 2!)
+                </a>
+            </li>
+            <li>
+                <a href="https://emersonuan.github.io/firstwebpage/" target="_blank">
+                    <i class="fas fa-graduation-cap"></i> La Página del Curso (¡Donde empezó todo!)
+                </a>
+            </li>
+            <li>
+                <a href="https://openai.com/dall-e" target="_blank">
+                    <i class="fas fa-paint-brush"></i> DALL·E - ¡Crea imágenes alucinantes con la IA!
+                </a>
+            </li>
+            <li>
+                <a href="https://www.futuretools.io/" target="_blank">
+                    <i class="fas fa-tools"></i> FutureTools - ¡La caja de herramientas definitiva para la IA!
+                </a>
+            </li>
+        </ul>
+        <div style="clear: both;"></div>
+    </section>
 
-<section>
-  <h2>¡Arte Generado por la IA! 🎨</h2>
-  <img src="https://images.unsplash.com/photo-1682685797368-7c919d42f46b?w=800&q=80" alt="Imagen IA">
-  <p><em>Esta imagen, creada con IA, es una explosión de creatividad perfecta para inspirar en el aula.</em></p>
-</section>
+    <section>
+        <h2>¡Arte Generado por la IA! 🎨</h2>
+        <div style="text-align: center;">
+            <img src="URL_DE_TU_IMAGEN_IA_4" alt="Imagen IA" style="max-width: 400px;">
+            <p><em>Esta imagen, creada con IA, es una explosión de creatividad perfecta para inspirar en el aula.</em></p>
+        </div>
+    </section>
 
-<section>
-  <h2>¡A Jugar con los Números! 🎮</h2>
-  <p>Adivina el número secreto (entre 1 y 10):</p>
-  <input type="number" id="userGuess" min="1" max="10">
-  <button onclick="checkGuess()">¡Adivinar!</button>
-  <p id="result"></p>
+    <section>
+        <h2>¡A Jugar con los Números! 🎮</h2>
+        <p>Adivina el número secreto (entre 1 y 10):</p>
+        <input type="number" id="userGuess" min="1" max="10">
+        <button onclick="checkGuess()">¡Adivinar!</button>
+        <p id="result"></p>
 
-  <script>
-    const secreto = Math.floor(Math.random() * 10) + 1;
-    function checkGuess() {
-      const intento = parseInt(document.getElementById("userGuess").value);
-      const resultado = document.getElementById("result");
-      if (intento === secreto) {
-        resultado.textContent = "¡Lo adivinaste! 🎉 ¡Eres un crack!";
-      } else {
-        resultado.textContent = "¡Fallaste! 😢 ¡Inténtalo de nuevo!";
-      }
-    }
-  </script>
-</section>
+        <script>
+            const secreto = Math.floor(Math.random() * 10) + 1;
 
-<section>
-  <h2>¡Una Pildorita de Inspiración! 🌟</h2>
-  <blockquote>
-    "La educación no es la respuesta a la pregunta. La educación es el medio para encontrar la respuesta a todas las preguntas." - Louis L'Amour
-  </blockquote>
-</section>
+            function checkGuess() {
+                const intento = parseInt(document.getElementById("userGuess").value);
+                const resultado = document.getElementById("result");
+                if (intento === secreto) {
+                    resultado.textContent = "¡Lo adivinaste! 🎉 ¡Eres un crack!";
+                } else {
+                    resultado.textContent = "¡Fallaste! 😢 ¡Inténtalo de nuevo!";
+                }
+            }
+        </script>
+    </section>
 
-<footer>
-  <p>
-    Hecho con ❤️ por [Tu Nombre] | ¡A explorar el futuro de la educación con IA!
-  </p>
-</footer>
+    <section>
+        <h2>¡Una Pildorita de Inspiración! 🌟</h2>
+        <div style="text-align: center;">
+            <img src="URL_DE_TU_IMAGEN_IA_5" alt="Texto Inspirador" style="max-width: 300px; border-radius: 50%;" >
+            <blockquote>
+                "La educación no es la respuesta a la pregunta. La educación es el medio para encontrar la respuesta a todas las preguntas." - Louis L'Amour
+            </blockquote>
+        </div>
+    </section>
+
+    <footer>
+        <p>
+            Hecho con ❤️ por [Tu Nombre] | ¡A explorar el futuro de la educación con IA!
+        </p>
+    </footer>
 
 </body>
+
 </html>
